@@ -63,7 +63,7 @@ const requestListener = (req, res) => {
       })
     );
     res.end();
-  } else if (req.url.startsWith("/todos/") && req.method == "DELETE") {
+  } else if (req.url.startsWith("/todo/") && req.method == "DELETE") {
     const id = req.url.split("/").pop();
     const index = todos.findIndex((item) => item.id === id);
     if (index !== -1) {
